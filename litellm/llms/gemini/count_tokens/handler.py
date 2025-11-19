@@ -28,6 +28,10 @@ class GoogleAIStudioTokenCounter:
         """
         import copy
 
+        # Handle None or non-iterable inputs
+        if contents is None:
+            return None
+
         cleaned_contents = copy.deepcopy(contents)
 
         for content in cleaned_contents:
